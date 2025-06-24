@@ -36,7 +36,7 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/open-brewery-pipeline.git
+   git clone https://github.com/thiiagofaria/breweries_case.git
    cd open-brewery-pipeline
    ```
 
