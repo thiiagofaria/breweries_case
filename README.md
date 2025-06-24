@@ -37,7 +37,7 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/thiiagofaria/breweries_case.git
-   cd open-brewery-pipeline
+   cd breweries_case
    ```
 
 2. **Start the services**  
@@ -70,8 +70,11 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 ## Data Layers Overview
 
 - **Raw**: Raw JSON from API stored in MinIO  
-- **Bronze**: Parsed and struct# Open Brewery Data Pipeline Project
+- **Bronze**: Parsed and structured data  
+- **Silver**: Cleaned, deduplicated, and type-cast models  
+- **Gold**: Business-ready data (e.g., aggregated or enriched)
 
+All outputs are stored as **Parquet** files for optimal performance and interoperability.
 
 ---
 
