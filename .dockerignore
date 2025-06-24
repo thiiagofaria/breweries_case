@@ -1,0 +1,27 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs e temporários
+*.log
+logs/
+airflow/logs/
+.airflow/
+
+# DBT
+dbt/target/
+dbt/dbt_packages/
+
+
+# Airflow
+dags/__pycache__/
+dags/*.pyc
+
+
+
+# Git & OS
+.DS_Store
+.env
+.env.*
+*.swp

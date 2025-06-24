@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: breweries_silver
+    description: >
+      Cleaned and standardized brewery data from the Open Brewery DB API.
+      This is the silver layer, refined from the bronze raw ingestion.
+    columns:
+      - name: id
+        description: Unique identifier for each brewery
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: Brewery name
+        tests:
+          - not_null
+
+      - name: brewery_type
+        description: Type of brewery (e.g., micro, brewpub, regional)
+        tests:
+          - accepted_values:
+              values: ['micro', 'nano', 'regional', 'brewpub', 'large', 'planning', 'contract', 'proprietor', 'closed']
+
+      - name: address_1
+        description: Primary street address
+
+      - name: address_2
+        description: Additional address info (if any)
+
+      - name: address_3
+        description: Additional address info (if any)
+
+      - name: street
+        description: Street address
+
+      - name: city
+        description: City where the brewery is located
+
+      - name: state
+        description: State or region name
+
+      - name: state_province
+        description: State or province (when applicable)
+
+      - name: postal_code
+        description: ZIP or postal code
+
+      - name: country
+        description: Country of the brewery
+
+      - name: phone
+        description: Brewery phone number
+
+      - name: website_url
+        description: Brewery website URL
+
+      - name: latitude
+        description: Latitude coordinate
+
+      - name: longitude
+        description: Longitude coordinate

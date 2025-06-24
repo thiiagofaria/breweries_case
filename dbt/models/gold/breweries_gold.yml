@@ -1,0 +1,23 @@
+# models/gold/breweries_gold.yml
+version: 2
+
+models:
+  - name: breweries_gold
+    description: "View that aggregates the number of breweries by type, state, and city."
+    columns:
+      - name: brewery_type
+        description: "The type of the brewery (e.g., micro, regional, brewpub, etc.)."
+        tests:
+          - not_null
+      - name: state
+        description: "The state where the brewery is located."
+        tests:
+          - not_null
+      - name: city
+        description: "The city where the brewery is located."
+        tests:
+          - not_null
+      - name: brewery_count
+        description: "The count of breweries of that type in each state+city combination."
+        tests:
+          - not_null
