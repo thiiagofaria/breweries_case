@@ -1,23 +1,20 @@
 import pandas as pd
 import boto3
-import requests  # <- faltava isso
+import requests
 from io import BytesIO
 from botocore.exceptions import ClientError
 
-# Requisição à API
+
 headers = {"User-Agent": "Mozilla/5.0"}
 response = requests.get("https://api.openbrewerydb.org/v1/breweries?per_page=50", headers=headers)
 response.raise_for_status()
 
-# Converte JSON para DataFrame
 df = pd.DataFrame(response.json())
 
-# Serializa em Parquet na memória
 buffer = BytesIO()
 df.to_parquet(buffer, index=False)
 buffer.seek(0)
 
-# Conecta no MinIO
 s3 = boto3.client(
     's3',
     endpoint_url='http://minio:9000',
@@ -28,7 +25,6 @@ s3 = boto3.client(
 bucket = "raw"
 key = "breweries.parquet"
 
-# Cria bucket se não existir
 try:
     s3.head_bucket(Bucket=bucket)
 except ClientError as e:
@@ -38,6 +34,5 @@ except ClientError as e:
     else:
         raise
 
-# Faz upload do arquivo Parquet
 s3.upload_fileobj(buffer, Bucket=bucket, Key=key)
-print("✅ Upload concluído com sucesso!")
+print("Upload concluído com sucesso!")

@@ -1,4 +1,3 @@
--- models/silver/breweries_silver.sql
 
 {{ config(
     materialized='external',
