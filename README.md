@@ -1,6 +1,6 @@
-# 🍺 Open Brewery Data Pipeline Project
+# Open Brewery Data Pipeline Project
 
-## 🎯 Project Objective
+## Project Objective
 
 The objective of this project is to build a modern data pipeline by ingesting data from the public API [Open Brewery DB](https://www.openbrewerydb.org/), storing it in a **raw** layer on MinIO, and applying transformation and validation steps through the **bronze**, **silver**, and **gold** layers.
 
@@ -27,12 +27,12 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
-### ✅ Prerequisites
+### Prerequisites
 - [Docker](https://www.docker.com/) installed and running locally
 
-### 🧬 Steps
+### Steps
 
 1. **Clone the repository**  
    ```bash
@@ -57,7 +57,7 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 📊 Execution Preview
+## Execution Preview
 
 ### DAG Execution Flow in Airflow
 ![Airflow DAG graph](./images/airflow_graph.png)
@@ -67,12 +67,12 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 📁 Data Layers Overview
+## Data Layers Overview
 
 - **Raw**: Raw JSON from API stored in MinIO  
 - **Bronze**: Parsed and struct# 🍺 Open Brewery Data Pipeline Project
 
-## 🎯 Project Objective
+## Project Objective
 
 The objective of this project is to build a modern data pipeline by ingesting data from the public API [Open Brewery DB](https://www.openbrewerydb.org/), storing it in a **raw** layer on MinIO, and applying transformation and validation steps through the **bronze**, **silver**, and **gold** layers.
 
@@ -99,12 +99,12 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
-### ✅ Prerequisites
+### Prerequisites
 - [Docker](https://www.docker.com/) installed and running locally
 
-### 🧬 Steps
+### Steps
 
 1. **Clone the repository**  
    ```bash
@@ -113,7 +113,6 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
    ```
 
 2. **Start the services**  
-   ⚠️ Correct command:
    ```bash
    docker compose up --build
    ```
@@ -130,7 +129,7 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 📊 Execution Preview
+## Execution Preview
 
 ### DAG Execution Flow in Airflow
 ![Airflow DAG graph](./images/airflow_graph.png)
@@ -140,7 +139,7 @@ The final output is saved in **Parquet format**, optimized for downstream analyt
 
 ---
 
-## 📁 Data Layers Overview
+## Data Layers Overview
 
 - **Raw**: Raw JSON from API stored in MinIO  
 - **Bronze**: Parsed and structured data  
@@ -151,7 +150,7 @@ All outputs are stored as **Parquet** files for optimal performance and interope
 
 ---
 
-## 🧪 Optional: Querying with DBeaver or Other Tools
+## Optional: Querying with DBeaver or Other Tools
 
 If you want to explore the transformed data manually, you can use a tool like **DBeaver**, **DuckDB CLI**, or any compatible SQL client to connect directly to the `.duckdb` file created by the pipeline.
 
