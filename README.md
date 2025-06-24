@@ -88,6 +88,4 @@ This is helpful for ad hoc analysis or quick inspection of processed data.ured d
 - **Silver**: Cleaned, deduplicated, and type-cast models  
 - **Gold**: Business-ready data (e.g., aggregated or enriched)
 
-All outputs are stored as **Parquet** files for optimal performance and interoperability.
-
 ---
