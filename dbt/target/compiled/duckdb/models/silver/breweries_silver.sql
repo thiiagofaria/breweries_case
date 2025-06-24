@@ -1,5 +1,3 @@
--- models/silver/breweries_silver.sql
-
 
 
 WITH source AS (
