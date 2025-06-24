@@ -89,3 +89,12 @@ This is helpful for ad hoc analysis or quick inspection of processed data.ured d
 - **Gold**: Business-ready data (e.g., aggregated or enriched)
 
 ---
+
+## Possible Future Improvements
+
+- **Add timestamp field in API ingestion** to enable incremental data loads and avoid reprocessing the entire dataset on each run.
+- **Publish and host dbt documentation** (`dbt docs generate` + `dbt docs serve`) to explore the DAG, model lineage, and tests.
+- **Integrate alerting mechanisms**, such as email or Slack notifications, to inform when pipeline failures or anomalies occur.
+- **Unit tests for ingestion scripts** using tools like `pytest` to validate transformations outside dbt.
+- **Persist DuckDB file using mounted volumes**, making it accessible outside the container for BI tools or local inspection.
+- **Deploy to cloud-based infrastructure** for scalability (e.g. using AWS S3 + MWAA or GCP Cloud Composer).
